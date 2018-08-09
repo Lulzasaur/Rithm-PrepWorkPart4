@@ -1,0 +1,21 @@
+.content-wrapper{
+  width:80%;
+  margin: 4% 10% 5% 10%;
+}
+
+.content-wrapper{
+  position: relative;
+  text-align: center;
+}
+
+.toptext-wrapper{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+}
+
+.btmtext-wrapper{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+}
