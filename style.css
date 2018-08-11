@@ -1,21 +1,50 @@
 .content-wrapper{
-  width:80%;
-  margin: 4% 10% 5% 10%;
+  float:left;
+  height: 200px;
+  width: 320px;
+  margin: 2px;
+  display:block;
 }
 
-.content-wrapper{
-  position: relative;
-  text-align: center;
+img:hover{
+  opacity:.3;
+}
+
+.content-wrapper:hover{
+  float:left;
+  height: 200px;
+  width: 320px;
+  margin: 2px;
+  display:block;
+  opacity:10;
 }
 
 .toptext-wrapper{
-  position: absolute;
-  top: 10%;
-  left: 50%;
+  position: relative;
+  width: 300px;
+  bottom:200px;
+  text-align:center;
+  color: white;
 }
 
 .btmtext-wrapper{
-  position: absolute;
-  top: 80%;
-  left: 50%;
+  position: relative;
+  width: 300px;
+  bottom:50px;
+  text-align:center;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }

@@ -9,32 +9,25 @@ var img = document.getElementById('img'),
 button.addEventListener('click',function(){
     //add image
     var div = document.createElement('div');
-    div.insertAdjacentHTML('beforeend','<div class="content-wrapper delete"><img src='+img.value+'><div class="toptext-wrapper">'+toptxt.value+'</div><div class="btmtext-wrapper">'+btmtxt.value+'</div></div>');
-    
-    // //create del button
-    // var deleteBtn = document.createElement('button');
-
-    // //add classes to del button
-    // deleteBtn.className = 'btn btn-danger btn-sm float-right delete';
-
-    // //append text node
-    // deleteBtn.appendChild(document.createTextNode('X'))
-
-    // //append button to li
-
-    // div.appendChild(deleteBtn);
-    
-    //append to list
-
+    div.insertAdjacentHTML('beforeend','<div class="content-wrapper"><img class="delete" height="200" width="300" src='+img.value+'><div class="toptext-wrapper">'+toptxt.value+'</div><div class="btmtext-wrapper">'+btmtxt.value+'</div></div>');
     memelist.appendChild(div);
+    document.getElementById('img').value='';
+    document.getElementById('btmtxt').value='';
+    document.getElementById('toptxt').value='';
 });
 
 //delete element
 
 memelist.addEventListener('click',function(event){
+    var el = event.target;
+    var imageContainer;
+    var list;
     if(event.target.classList.contains('delete')){
-        var parentdiv = event.target.parentElement;
-        memelist.removeChild(parentdiv);
+        imageContainer = el.parentNode;
+        list = imageContainer.parentNode;
+        list.removeChild(imageContainer);
     }
 });
+
+
 
